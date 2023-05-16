@@ -5,8 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
+    <form method="post" action="verial.php" name="form">
+        <table>
+<tr>
+    <td> Ad*: </td>
+    <td> <input type="text" name="ad"  autofocus placeholder="Adınızı Giriniz..."> <br> </td>
+</tr>
+<tr>
+    <td> Soyad*:</td>
+    <td> <input type="text" name="soyad"  placeholder="Soyadınızı Giriniz..."> <br></td>
+</tr>
+<tr>
+    <td> Öğrenci Misiniz?:</td>
+    <td colspan="2">Evet <input type="radio" name="öğrencimezun" value="evet" id="evet" onclick="Disable();" > 
+    Hayır <input type="radio" name="öğrencimezun" value="hayır" id="hayır" onclick="Disable();" > <br></td>
+</tr>
+
+<tr>
+    <td> Okul:</td>
+    <td> <input type="text" name="okul" id="okul">
+</tr>
+
+<tr>
+    <td> Mesleğiniz:</td>
+    <td> <input type="text" name="meslek" id="meslek">
+</tr>
+
+<tr>
+    <td> Mesaj*:</td>
+    <td> <textarea name="mesaj" rows="6" cols="30"  placeholder="İletmek istediğiniz mesajınız..."></textarea>
+</tr>
+
+<tr>
+    <td> E-posta*:</td>
+    <td> <input type="text" name="email" > <br></td>
+</tr>
+<tr>
+    <td> Telefon:</td>
+    <td> <input type="tel" name="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+        placeholder="xxx xxx xx xx"> <br></td>
+</tr>
+
+
+
+<tr>
+    <td colspan="2">Onaylıyorum* <input type="checkbox" name="onay" value="1" ></td>
+</tr>
+<tr>
+    <td colspan="2"> <input type="submit" value="Gönder" onclick="Kontrol();"></td>
+</tr>
+<tr>
+    <td colspan="2"> <input type="reset" value="Temizle"></td>
+</tr>
+
+        </table>
+          
+         
+
+         
+
+
+
+
+    </form>
+
+
+
+    <script>
+         function Disable() {
+            var evet = document.forms["evet"];
+
+if (evet.checked==true) 
+
+    document.getElementById("meslek").disabled = true;
+else
+
+
+    document.getElementById("okul").disabled = true;
+
+}
+
+function Kontrol(){ 
+var txtad= document.form.ad.value;
+var txtsoyad = document.form.soyad.value;
+var txtmesaj = document.form.mesaj.value;
+var check = document.form.onay;
+var email = document.form.email.value;
+
+
+if(txtad.length>0  )
+ document.form.submit();
+else
+    alert( "Lütfen Ad Alanını Doldurunuz" );
+
+    if(txtsoyad.length>0 )
+ document.form.submit();
+else
+    alert( "Lütfen Soyad Alanını Doldurunuz" );
+
+    if(txtmesaj.length>0  )
+ document.form.submit();
+else
+    alert( "Lütfen mesaj Alanını Doldurunuz" );
+
+
+    if( check.checked == true )
+ document.form.submit();
+else
+    alert( "Lütfen Onay Kutusunu Kontrol Ediniz" );
+
+
+
+
+}
+
+    </script>
 
 
     
