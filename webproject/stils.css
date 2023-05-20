@@ -1,24 +1,52 @@
-
-
-
-.baslık{
-
-    margin-left:320px ;
-    margin-right:340px ;
-    background-color:lightgray;
+.yazı{
+  font-size: 80px;
+  margin-top: 250px;
+  font-family:"Courier New", Courier, monospace	;
 }
 
- .section{
-    margin-left: 320px;
-    margin-right: 300px;
+
+/* ----------------------özgecmiş----------------------- */
+.özgecmişsol{
+   background-color: #6799A3;
+  
+   width: 25%;
+   height: 800px;
+   float: left;
+
+
+}
+
+.baslık{
+ text-align: center;
+ font-family:Garamond, serif;
+  
+}
+
+ .özgecmişsağ{
+    margin-left:25%;  
     padding: 2%;
-    background-color:lightgray;
-    height: 300px;
-    width: 800px;
-   
-    
+    background-color:#CBEAEB;
+    height: 800px;
+    width: 75%;
+    font-family: Tahoma, Verdana, sans-serif ;
+     
 } 
 
+.öfooter{
+  text-align: center;
+  background-color: #3B7080;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .özgecmişsağ {
+    margin: 0px;
+    width: 100%;
+  }
+  .özgecmişsol{
+    width: 0px;
+  }
+}
 
 .carousel{
 
@@ -28,7 +56,7 @@
 }
 
 
-/*------------- özgecmiş--------------- */
+/*------------- hakkında--------------- */
 
 
         * {
@@ -77,9 +105,10 @@
         }
         
         /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 800px) {
           .column.side, .column.middle {
             width: 100%;
+            
           }
         }
 
@@ -149,21 +178,20 @@
         margin-top: 20px;
       }
       
-      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other
       @media screen and (max-width: 800px) {
-        .leftcolumn, .rightcolumn {   
+        .sol, .sağ {   
           width: 100%;
           padding: 0;
         }
       }
       
-      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-      /* @media screen and (max-width: 400px) {
-        .topnav a {
-          float: none;
-          width: 100%;
-        } */ 
+      .mirasımız{
+           width: 25%;
+           height: 900px;
+           float:left;
 
+      }
+      
         .card ul {
             list-style-type: none;
             margin: 0;
@@ -190,4 +218,32 @@
           }
 
           
-      
+      .iletişim
+      {
+        background-color: white;
+        width: 500px;
+        border: 5px solid rgb(96, 0, 90);
+        padding: 25px;
+        margin: auto;
+        margin-top: 100px;
+
+      }
+.login
+{
+      background-color: white;
+      width: 30%;
+      border: 5px solid rgb(96, 0, 90);
+      padding: 50px;
+      margin: auto;
+      margin-top: 100px;
+  
+}
+
+@media screen and (max-width: 1000px) {
+    .login {
+      width: 100%;
+    }
+    .iletişim{
+        width: 100%;
+      }
+  }
